@@ -13,7 +13,8 @@ use App\Http\Requests\ArticleRequest;
 class ArticleController extends Controller
 {
     public function indexAll(){
-        $articles = Article::with('tags')
+        $articles = Article::with('tags', 'user')
+            ->whereNotNull('publish_at')
             ->orderBy('publish_at', 'desc')
             ->limit(10)
             ->get();

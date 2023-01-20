@@ -42,7 +42,6 @@
                 <h1 class="text-center text-6xl">BLOG</h1>
                     <div class="container d-flex">
                         @foreach($articles as $article)
-                        @if($article->publish_at != null)
                         <div class="card m-5 rounded" style="width:30rem;">
                         <img src="https://via.placeholder.com/100/09f/fff.png" class="card-img-top" alt="..."> 
                             <div class="card-body">
@@ -58,7 +57,6 @@
                                 </p>
                             </div>
                         </div>
-                        @endif
                         @endforeach
                     </div>
             </div>        
